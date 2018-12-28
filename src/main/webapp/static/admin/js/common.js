@@ -1,5 +1,5 @@
 layui.config({
-	base: '../../static/admin/js/module/'
+	base: getRootPath()+'/static/admin/js/module/'
 }).extend({
 	dialog: 'dialog',
 });
@@ -25,7 +25,7 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element
 	$('.addBtn').click(function() {
 		var url=$(this).attr('data-url');
 		//将iframeObj传递给父级窗口,执行操作完成刷新
-		parent.page("菜单添加", url, iframeObj, w = "700px", h = "620px");
+		parent.page("添加", url, iframeObj, w = "700px", h = "620px");
 		return false;
 
 	}).mouseenter(function() {
@@ -165,4 +165,21 @@ function refresh() {
 	}
 
 	layer.closeAll();
+}
+
+/**
+ * 获取项目根路径
+ */
+function getRootPath() {
+	//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+	var curWwwPath = window.document.location.href;
+	//获取主机地址之后的目录，如： uimcardprj/share/meun.jsp
+	var pathName = window.document.location.pathname;
+	var pos = curWwwPath.indexOf(pathName);
+	//获取主机地址，如： http://localhost:8083
+	var localhostPaht = curWwwPath.substring(0, pos);
+	//获取带"/"的项目名，如：/uimcardprj
+	var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+	var rootpath = localhostPaht + projectName;
+	return (rootpath);
 }

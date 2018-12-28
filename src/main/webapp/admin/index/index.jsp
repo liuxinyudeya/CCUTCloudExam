@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<%@ page import="javafx.scene.control.Alert" %><%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2018/12/27 0027
+  Time: 14:06
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -7,8 +15,10 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>CCUT云上考试系统</title>
-    <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/admin.css"/>
+
+
 </head>
 <body>
 <div class="main-layout" id='main-layout'>
@@ -31,22 +41,69 @@
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" data-url="article-list.html" data-id='3' data-text="文章管理"><span
                             class="l-line"></span>文章管理</a></dd>
-                    <dd><a href="javascript:;" data-url="danye-list.html" data-id='9' data-text="单页管理"><span
+                    <dd><a href="javascript:;" data-url="danye-list.html" data-id='4' data-text="单页管理"><span
                             class="l-line"></span>单页管理</a></dd>
                 </dl>
             </li>
 
             <li class="layui-nav-item">
-                <a href="javascript:;"><i class="iconfont">&#x1D568;</i>推荐位管理</a>
+                <a href="javascript:;"><i class="iconfont">&#x1D568;</i>教务处管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="academy/academyManager.jsp" data-id='5' data-text="学院信息"><span
+                            class="l-line"></span>学院信息</a></dd>
+                </dl>
+                <dl class="layui-nav-child">
+                <dd><a href="javascript:;" data-url="specialty/specialtyManager.jsp" data-id='11' data-text="专业信息"><span
+                        class="l-line"></span>专业信息</a></dd>
+            </dl>
+
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="teacher/teacherManager.jsp" data-id='6' data-text="教师信息"><span
+                            class="l-line"></span>教师信息</a></dd>
+
+                </dl>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="course/courseManager.jsp" data-id='7' data-text="课程信息"><span
+                            class="l-line"></span>课程信息</a></dd>
+
+                </dl>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="teacher-course/teacher-courseManager.jsp" data-id='8'
+                           data-text="教师教学管理"><span
+                            class="l-line"></span>教师教学管理</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="student/studentManager.jsp" data-id='9' data-text="学生信息"><span
+                            class="l-line"></span>学生信息</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="" data-id='10' data-text="教学分析"><span
+                            class="l-line"></span>教学分析</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="" data-id='12' data-text="发布公告"><span
+                            class="l-line"></span>发布公告</a></dd>
+
+                </dl>
+
             </li>
+
             <li class="layui-nav-item">
-                <a href="javascript:;"><i class="iconfont">&#xe60c;</i>友情链接</a>
+                <a href="javascript:;"><i class="iconfont">&#xe60c;</i>教师管理</a>
+
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#xe60a;</i>RBAC</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="email.html" data-id='4' data-text="邮件系统"><i
+                <a href="javascript:;" data-url="email.html" data-id='30' data-text="邮件系统"><i
                         class="iconfont">&#xe603;</i>邮件系统</a>
             </li>
             <li class="layui-nav-item">
@@ -56,10 +113,10 @@
                 <a href="javascript:;"><i class="iconfont">&#xe600;</i>备份管理</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="admin-info.html" data-id='5' data-text="个人信息"><i class="iconfont">&#xe606;</i>个人信息</a>
+                <a href="javascript:;" data-url="admin-info.html" data-id='31' data-text="个人信息"><i class="iconfont">&#xe606;</i>个人信息</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="system.html" data-id='6' data-text="系统设置"><i
+                <a href="javascript:;" data-url="system.html" data-id='32' data-text="系统设置"><i
                         class="iconfont">&#xe60b;</i>系统设置</a>
             </li>
         </ul>
@@ -107,12 +164,13 @@
 </div>
 <script type="text/javascript">
     var scope = {
-        link: './welcome.html'
+        link: 'admin/index/welcome.html'
     }
+
 </script>
-<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/admin/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=request.getContextPath()%>/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=request.getContextPath()%>/static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=request.getContextPath()%>/static/admin/js/main.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
