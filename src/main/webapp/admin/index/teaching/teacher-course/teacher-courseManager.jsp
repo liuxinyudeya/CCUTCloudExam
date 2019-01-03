@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>课程信息</title>
+    <title>教师教学管理</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/admin.css"/>
 </head>
@@ -23,7 +23,7 @@
         <div class="layui-form-item">
             <div class="layui-inline tool-btn">
                 <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs"
-                        data-url="course/add-course.jsp">
+                        data-url="admin/index/teaching/teacher-course/add-teacher-course.jsp">
                     <i class="layui-icon">&#xe654;</i></button>
                 <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"
                         data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
@@ -49,9 +49,11 @@
             <colgroup>
                 <col width="50">
                 <col class="hidden-xs" width="80">
+                <col class="hidden-xs" width="100">
+                <col class="hidden-xs" width="200">
+                <col class="hidden-xs" width="200">
+                <col class="hidden-xs" width="100">
                 <col class="hidden-xs" width="150">
-                <col class="hidden-xs" width="100">
-                <col class="hidden-xs" width="100">
                 <col class="hidden-xs" width="100">
                 <col>
                 <col width="130">
@@ -60,11 +62,13 @@
             <tr>
                 <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
                 <th class="hidden-xs">序号</th>
-                <th class="hidden-xs">课程名</th>
                 <th class="hidden-xs">年级</th>
-                <th class="hidden-xs">学时</th>
-                <th class="hidden-xs">及格线</th>
-                <th class="hidden-xs">总分</th>
+                <th class="hidden-xs">学院</th>
+                <th class="hidden-xs">系别</th>
+                <th class="hidden-xs">班号</th>
+                <th class="hidden-xs">课程名</th>
+                <th class="hidden-xs">教师</th>
+                <th class="hidden-xs">考试状态</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -72,14 +76,16 @@
             <tr id='node-1' class="parent collapsed">
                 <td><input type="checkbox" name="" lay-skin="primary" data-id="1"></td>
                 <td class="hidden-xs">1</td>
-                <td class="hidden-xs">计算机网络</td>
-                <td class="hidden-xs">2017届</td>
-                <td>64学时</td>
-                <td>60分</td>
-                <td>100分</td>
+                <td class="hidden-xs">2015届</td>
+                <td class="hidden-xs">国际教育学院</td>
+                <td>计算机科学与技术</td>
+                <td>153609</td>
+                <td>计算机网络</td>
+                <td>刘心宇</td>
+                <td>未考试</td>
                 <td>
                     <div class="layui-inline">
-                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="course/update-course.jsp"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="admin/index/teaching/teacher-course/add-teacher-course.jsp"><i class="layui-icon">&#xe642;</i></button>
                         <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url=""><i class="layui-icon">&#xe640;</i></button>
                     </div>
                 </td>

@@ -30,18 +30,19 @@
             <li class="layui-nav-item layui-nav-itemed">
                 <a href="javascript:;"><i class="iconfont">&#xe607;</i>菜单管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="menu1.html" data-id='1' data-text="后台菜单"><span
+                    <dd><a href="javascript:;" data-url="admin/index/menu1.html" data-id='1' data-text="后台菜单"><span
                             class="l-line"></span>后台菜单</a></dd>
-                    <dd><a href="javascript:;" data-url="menu2.html" data-id='2' data-text="前台菜单"><span
+                    <dd><a href="javascript:;" data-url="admin/index/menu2.html" data-id='2' data-text="前台菜单"><span
                             class="l-line"></span>前台菜单</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#xe608;</i>内容管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="article-list.html" data-id='3' data-text="文章管理"><span
+                    <dd><a href="javascript:;" data-url="admin/index/article-list.html" data-id='3'
+                           data-text="文章管理"><span
                             class="l-line"></span>文章管理</a></dd>
-                    <dd><a href="javascript:;" data-url="danye-list.html" data-id='4' data-text="单页管理"><span
+                    <dd><a href="javascript:;" data-url="admin/index/danye-list.html" data-id='4' data-text="单页管理"><span
                             class="l-line"></span>单页管理</a></dd>
                 </dl>
             </li>
@@ -49,34 +50,40 @@
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#x1D568;</i>教务处管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="academy/academyManager.jsp" data-id='5' data-text="学院信息"><span
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/academy/academyManager.jsp" data-id='5'
+                           data-text="学院信息"><span
                             class="l-line"></span>学院信息</a></dd>
                 </dl>
                 <dl class="layui-nav-child">
-                <dd><a href="javascript:;" data-url="specialty/specialtyManager.jsp" data-id='11' data-text="专业信息"><span
-                        class="l-line"></span>专业信息</a></dd>
-            </dl>
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/specialty/specialtyManager.jsp"
+                           data-id='11' data-text="专业信息"><span
+                            class="l-line"></span>专业信息</a></dd>
+                </dl>
 
 
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="teacher/teacherManager.jsp" data-id='6' data-text="教师信息"><span
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/teacher/teacherManager.jsp" data-id='6'
+                           data-text="教师信息"><span
                             class="l-line"></span>教师信息</a></dd>
 
                 </dl>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="course/courseManager.jsp" data-id='7' data-text="课程信息"><span
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/course/courseManager.jsp" data-id='7'
+                           data-text="课程信息"><span
                             class="l-line"></span>课程信息</a></dd>
 
                 </dl>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="teacher-course/teacher-courseManager.jsp" data-id='8'
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/teacher-course/teacher-courseManager.jsp"
+                           data-id='8'
                            data-text="教师教学管理"><span
                             class="l-line"></span>教师教学管理</a></dd>
 
                 </dl>
 
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="student/studentManager.jsp" data-id='9' data-text="学生信息"><span
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/student/studentManager.jsp" data-id='9'
+                           data-text="学生信息"><span
                             class="l-line"></span>学生信息</a></dd>
 
                 </dl>
@@ -98,12 +105,56 @@
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#xe60c;</i>教师管理</a>
 
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/teacher/class/classManager.jsp" data-id='13'
+                           data-text="班级信息"><span
+                            class="l-line"></span>班级信息</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/teacher/paper/paperManager.jsp" data-id='14'
+                           data-text="试卷管理"><span
+                            class="l-line"></span>试卷管理</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/teacher/grade/gradeManager.jsp" data-id='15'
+                           data-text="成绩总览"><span
+                            class="l-line"></span>成绩总览</a></dd>
+
+                </dl>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;"><i class="iconfont">&#xe60a;</i>RBAC</a>
+                <a href="javascript:;"><i class="iconfont">&#xe60a;</i>学生中心</a>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='16'
+                           data-text="考试信息"><span
+                            class="l-line"></span>考试信息</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='16'
+                           data-text="进入考场"><span
+                            class="l-line"></span>进入考场</a></dd>
+
+                </dl>
+
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='16'
+                           data-text="成绩信息"><span
+                            class="l-line"></span>成绩信息</a></dd>
+
+                </dl>
+
+
             </li>
+
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="email.html" data-id='30' data-text="邮件系统"><i
+                <a href="javascript:;" data-url="admin/index/email.html" data-id='30' data-text="邮件系统"><i
                         class="iconfont">&#xe603;</i>邮件系统</a>
             </li>
             <li class="layui-nav-item">
@@ -113,10 +164,10 @@
                 <a href="javascript:;"><i class="iconfont">&#xe600;</i>备份管理</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="admin-info.html" data-id='31' data-text="个人信息"><i class="iconfont">&#xe606;</i>个人信息</a>
+                <a href="javascript:;" data-url="admin/index/admin-info.html" data-id='31' data-text="个人信息"><i class="iconfont">&#xe606;</i>个人信息</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;" data-url="system.html" data-id='32' data-text="系统设置"><i
+                <a href="javascript:;" data-url="admin/index/system.html" data-id='32' data-text="系统设置"><i
                         class="iconfont">&#xe60b;</i>系统设置</a>
             </li>
         </ul>
@@ -149,7 +200,7 @@
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show" style="background: #f5f5f5;">
                         <!--1-->
-                        <iframe src="welcome.html" width="100%" height="100%" name="iframe" scrolling="auto"
+                        <iframe src="admin/index/welcome.html" width="100%" height="100%" name="iframe" scrolling="auto"
                                 class="iframe" framborder="0"></iframe>
                         <!--1end-->
                     </div>

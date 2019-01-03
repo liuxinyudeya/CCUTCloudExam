@@ -23,7 +23,7 @@
         <div class="layui-form-item">
             <div class="layui-inline tool-btn">
                 <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs"
-                        data-url="specialty/add-specialty.jsp">
+                        data-url="admin/index/teaching/specialty/add-specialty.jsp">
                     <i class="layui-icon">&#xe654;</i></button>
                 <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"
                         data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
@@ -76,7 +76,7 @@
                 <td>153609</td>
                 <td>
                     <div class="layui-inline">
-                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="specialty/update-specialty.jsp"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="admin/index/teaching/specialty/update-specialty.jsp"><i class="layui-icon">&#xe642;</i></button>
                         <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
                     </div>
                 </td>

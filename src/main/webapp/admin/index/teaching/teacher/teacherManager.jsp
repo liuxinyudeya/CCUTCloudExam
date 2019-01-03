@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2018/12/27 0027
-  Time: 15:39
+  Date: 2018/12/28 0028
+  Time: 9:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>院系信息</title>
+    <title>教师信息</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/admin.css"/>
 </head>
@@ -23,7 +23,7 @@
         <div class="layui-form-item">
             <div class="layui-inline tool-btn">
                 <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs"
-                        data-url="academy/add-academy.jsp">
+                        data-url="admin/index/teaching/teacher/add-teacher.jsp">
                     <i class="layui-icon">&#xe654;</i></button>
                 <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"
                         data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
@@ -48,10 +48,10 @@
         <table class="layui-table" lay-skin="line">
             <colgroup>
                 <col width="50">
-                <col class="hidden-xs" width="60">
+                <col class="hidden-xs" width="80">
                 <col class="hidden-xs" width="100">
-                <col class="hidden-xs" width="170">
-                <col class="hidden-xs" width="170">
+                <col class="hidden-xs" width="150">
+                <col class="hidden-xs" width="150">
                 <col>
                 <col width="130">
             </colgroup>
@@ -59,10 +59,10 @@
             <tr>
                 <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
                 <th class="hidden-xs">序号</th>
-                <th class="hidden-xs">年级</th>
-                <th class="hidden-xs">学院</th>
-                <th class="hidden-xs">专业数量</th>
-                <th class="hidden-xs">班级数量</th>
+                <th class="hidden-xs">姓名</th>
+                <th class="hidden-xs">性别</th>
+                <th class="hidden-xs">所授科目</th>
+                <th class="hidden-xs">所属院系</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -70,14 +70,14 @@
             <tr id='node-1' class="parent collapsed">
                 <td><input type="checkbox" name="" lay-skin="primary" data-id="1"></td>
                 <td class="hidden-xs">1</td>
-                <td class="hidden-xs">2015</td>
-                <td class="hidden-xs">国际教育学院</td>
-                <td>计算机技术与科学</td>
-                <td>153609</td>
+                <td class="hidden-xs">刘心宇</td>
+                <td class="hidden-xs">男</td>
+                <td>java</td>
+                <td>国际教育学院</td>
                 <td>
                     <div class="layui-inline">
-                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="academy/add-academy.jsp"><i class="layui-icon">&#xe642;</i></button>
-                        <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1"  data-url=""><i class="layui-icon">&#xe640;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="admin/index/teaching/teacher/add-teacher.jsp"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url=""><i class="layui-icon">&#xe640;</i></button>
                     </div>
                 </td>
             </tr>
@@ -90,3 +90,4 @@
 </body>
 
 </html>
+

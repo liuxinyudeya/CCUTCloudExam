@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 配置处理器映射器，处理器适配器 -->
+    <!-- 实际生产中，用注解驱动 处理器适配器，映射器的配置 注解驱动默认加载许多参数绑定的方法-->
+    <mvc:annotation-driven />
+
+    <!-- 配置Handel，通过注解扫描配置 -->
+    <!-- 扫描所有controller类 -->
+    <context:component-scan base-package="org.liuxinyu.project.*.*.controller" />
+</beans>
