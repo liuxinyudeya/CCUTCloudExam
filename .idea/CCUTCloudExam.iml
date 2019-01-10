@@ -10,9 +10,9 @@
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/src" />
-          <root url="file://$MODULE_DIR$/src/main/resource" />
           <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resource" />
+          <root url="file://$MODULE_DIR$/src/main/src" />
         </sourceRoots>
       </configuration>
     </facet>

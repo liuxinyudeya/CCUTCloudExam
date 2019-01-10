@@ -61,8 +61,8 @@
                 <th class="hidden-xs">序号</th>
                 <th class="hidden-xs">年级</th>
                 <th class="hidden-xs">学院</th>
-                <th class="hidden-xs">系别</th>
-                <th class="hidden-xs">班级编号</th>
+                <th class="hidden-xs">专业</th>
+                <th class="hidden-xs">班级数量</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -73,7 +73,7 @@
                 <td class="hidden-xs">2015</td>
                 <td class="hidden-xs">国际教育学院</td>
                 <td>计算机技术与科学</td>
-                <td>153609</td>
+                <td>10</td>
                 <td>
                     <div class="layui-inline">
                         <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="admin/index/teaching/specialty/update-specialty.jsp"><i class="layui-icon">&#xe642;</i></button>

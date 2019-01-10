@@ -60,6 +60,13 @@
                             class="l-line"></span>专业信息</a></dd>
                 </dl>
 
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="admin/index/teaching/grade/gradeManager.jsp" data-id='19'
+                           data-text="班级信息"><span
+                            class="l-line"></span>班级信息</a></dd>
+
+                </dl>
+
 
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" data-url="admin/index/teaching/teacher/teacherManager.jsp" data-id='6'
@@ -137,14 +144,14 @@
                 </dl>
 
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='16'
+                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='17'
                            data-text="进入考场"><span
                             class="l-line"></span>进入考场</a></dd>
 
                 </dl>
 
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='16'
+                    <dd><a href="javascript:;" data-url="admin/index/student/class/classManager.jsp" data-id='18'
                            data-text="成绩信息"><span
                             class="l-line"></span>成绩信息</a></dd>
 

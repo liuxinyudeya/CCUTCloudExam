@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>院系信息</title>
+    <title>班级信息</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/admin.css"/>
 </head>
@@ -23,7 +23,7 @@
         <div class="layui-form-item">
             <div class="layui-inline tool-btn">
                 <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs"
-                        data-url="admin/index/teaching/academy/add-academy.jsp">
+                        data-url="admin/index/teaching/grade/add-grade.jsp">
                     <i class="layui-icon">&#xe654;</i></button>
                 <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"
                         data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
@@ -61,8 +61,8 @@
                 <th class="hidden-xs">序号</th>
                 <th class="hidden-xs">年级</th>
                 <th class="hidden-xs">学院</th>
-                <th class="hidden-xs">专业数量</th>
-                <th class="hidden-xs">班级数量</th>
+                <th class="hidden-xs">系别</th>
+                <th class="hidden-xs">班级编号</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -76,11 +76,8 @@
                 <td>153609</td>
                 <td>
                     <div class="layui-inline">
-                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1"
-                                data-url="admin/index/teaching/academy/add-academy.jsp"><i
-                                class="layui-icon">&#xe642;</i></button>
-                        <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url=""><i
-                                class="layui-icon">&#xe640;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="admin/index/teaching/grade/update-grade.jsp"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
                     </div>
                 </td>
             </tr>
@@ -89,16 +86,6 @@
 </div>
 <script src="<%=request.getContextPath()%>/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
-<script src="<%=request.getContextPath()%>/static/admin/js/jquery.js" type="text/javascript" charset="utf-8"></script>
-<script>
-
-//    $.ajax({
-//        url: getRootPath()+"/AcademyManager_BG/selectAcademy.action",
-//        success:function () {
-//            alert("123");
-//        }
-//    })
-</script>
 
 </body>
 

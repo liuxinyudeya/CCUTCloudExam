@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 使用注解开发 配置组件扫描 -->
-    <context:component-scan base-package="org.liuxinyu.project.*"/>
+    <context:component-scan base-package="org.liuxinyu.project"/>
 
     <!-- 引入配置文件 -->
     <bean id="propertyPlaceholderConfigurer"
@@ -21,20 +21,31 @@
         <property name="password" value="${password}"/>
     </bean>
 
+
+
+
     <!-- 配置SQL session工厂 -->
     <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations">
-            <list>
-                <value>classpath:org/liuxinyu/project/*/*/domain/*.xml</value>
-            </list>
-        </property>
+        <property name="mapperLocations" value="classpath:org/liuxinyu/project/*/*/domain/*.xml"/>
+
+    </bean>
+
+    <!--4 自动扫描对象关系映射 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定会话工厂，如果当前上下文中只定义了一个则该属性可省去 -->
+        <property name="sqlSessionFactoryBeanName" value="sessionFactory"></property>
+        <!-- 指定要自动扫描接口的基础包，实现接口 -->
+        <property name="basePackage" value="org.liuxinyu.project.*.*.dao"></property>
+
     </bean>
 
     <!-- 事务管理 -->
     <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+    <tx:annotation-driven transaction-manager="dataSourceTransactionManager"/>
 
     <tx:advice id="transactionInterceptor" transaction-manager="dataSourceTransactionManager">
         <tx:attributes>
@@ -44,5 +55,8 @@
             <tx:method name="delect*" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
+
+
+
 
 </beans>

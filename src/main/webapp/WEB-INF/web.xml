@@ -10,9 +10,18 @@
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+
     <!--ContextLoaderListener的作用就是启动Web容器时，自动装配ApplicationContext.xml的配置信息。-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
 
     <!-- 配置前端控制器将，所有请求交给springmvc的前端控制器处理-->

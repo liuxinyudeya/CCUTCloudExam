@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.liuxinyu.project.teaching.academy.dao.AcademyManager_Dao_Iface">
+    <insert id="addAcademy" parameterType="org.liuxinyu.project.teaching.academy.domain.Academy">
+       insert into academy_specialty_class (id,grade,department_role_id,academy_code,academy_name)
+         values (#{id},#{grade},#{department_role_id},#{academy_code},#{academy_name})
+   </insert>
+</mapper>

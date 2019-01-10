@@ -23,7 +23,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">年级：</label>
             <div class="layui-input-block">
-                <select name="category" lay-verify="required">
+                <select name="grade" lay-verify="required">
                     <option value=""></option>
                     <option value="2015">2015级</option>
                     <option value="2016">2016级</option>
@@ -37,12 +37,20 @@
         <div class="layui-form-item">
             <label class="layui-form-label">学院：</label>
             <div class="layui-input-block">
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入学院名称" autocomplete="off"
+                <input type="text" name="academy_name" required lay-verify="required" placeholder="请输入学院名称" autocomplete="off"
                        class="layui-input">
             </div>
 
         </div>
 
+        <div class="layui-form-item">
+            <label class="layui-form-label">编号：</label>
+            <div class="layui-input-block">
+                <input type="text" name="academy_code" required lay-verify="required" placeholder="请输入学院编号" autocomplete="off"
+                       class="layui-input">
+            </div>
+
+        </div>
 
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">备注</label>
