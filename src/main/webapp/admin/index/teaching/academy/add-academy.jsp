@@ -37,7 +37,8 @@
         <div class="layui-form-item">
             <label class="layui-form-label">学院：</label>
             <div class="layui-input-block">
-                <input type="text" name="academy_name" required lay-verify="required" placeholder="请输入学院名称" autocomplete="off"
+                <input type="text" name="academy_name" required lay-verify="required" placeholder="请输入学院名称"
+                       autocomplete="off"
                        class="layui-input">
             </div>
 
@@ -46,7 +47,8 @@
         <div class="layui-form-item">
             <label class="layui-form-label">编号：</label>
             <div class="layui-input-block">
-                <input type="text" name="academy_code" required lay-verify="required" placeholder="请输入学院编号" autocomplete="off"
+                <input type="text" name="academy_code" required lay-verify="required" placeholder="请输入学院编号"
+                       autocomplete="off"
                        class="layui-input">
             </div>
 
@@ -56,7 +58,7 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">备注</label>
             <div class="layui-input-block">
-                <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                <textarea name="comment" placeholder="请输入内容" class="layui-textarea"></textarea>
             </div>
         </div>
 
@@ -72,33 +74,41 @@
 <script src="<%=request.getContextPath()%>/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=request.getContextPath()%>/static/admin/index/teaching/academy/academyManager.js" type="text/javascript"
+        charset="utf-8"></script>
 <script>
+
     //Demo
     layui.use(['form'], function () {
         var form = layui.form();
-        form.render();
+
         //监听提交
         form.on('submit(formDemo)', function (data) {
-            layer.msg(JSON.stringify(data.field));
-            console.log(JSON.stringify(data.field));
+
+
             $.ajax({
                 data: {
-                     'data': JSON.stringify(data.field)//注意一定要使用JSON.stringify (在IE6，IE7中不支持)
-                 },
+                    'data': JSON.stringify(data.field)//注意一定要使用JSON.stringify (在IE6，IE7中不支持)
+                },
                 url: getRootPath() + "/AcademyManager_BG/addAcademy.action",
                 dataType: "json",//必须
                 contentType: "application/json;charsetset=UTF-8",//必须
-                success:function(data){
-                  console.log(data);
+                success: function (data) {
+                    layer.msg(data.message, {
+                        icon: 1,
+                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                    }, function () {
+                        refresh();
+                        query();
+                    });
                 },
-                error:function () {
+                error: function () {
                     alert(arguments[1]);
                 }
             })
-
+            return false;
         });
     });
-
 
 </script>
 </body>

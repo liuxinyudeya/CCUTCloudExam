@@ -90,15 +90,13 @@
 <script src="<%=request.getContextPath()%>/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=request.getContextPath()%>/static/admin/index/teaching/academy/academyManager.js" type="text/javascript" charset="utf-8"></script>
 <script>
-
-//    $.ajax({
-//        url: getRootPath()+"/AcademyManager_BG/selectAcademy.action",
-//        success:function () {
-//            alert("123");
-//        }
-//    })
+    $(document).ready(function(){
+        query();
+    })
 </script>
+
 
 </body>
 

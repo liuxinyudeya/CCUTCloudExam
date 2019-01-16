@@ -87,6 +87,15 @@
 <script src="<%=request.getContextPath()%>/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%=request.getContextPath()%>/static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 
+<script>
+
+    window.onload=query;
+
+    function query() {
+        console.log(window.name);
+    }
+
+</script>
 </body>
 
 </html>
